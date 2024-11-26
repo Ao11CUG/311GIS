@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="login.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="login.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="Login.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="Login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorLayerRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaskExtraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LayeredCanvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeoJsonInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WKTInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StatisticAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterBandAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorLayerBufferAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvexAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterNeighborhoodStatistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserTips.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VoronoiAnalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TravelQuYuan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotOne.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotTwo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotThree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotFour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotFive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotSix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotSeven.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotEight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotNine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TravelSanXia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VectorLayerRenderer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LayeredCanvas.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GeoJsonInput.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="StatisticAnalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RasterBandAnalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Triangulation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VectorLayerBufferAnalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RasterNeighborhoodStatistics.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="UserTips.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="VoronoiAnalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MaskExtraction.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ConvexAnalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TravelQuYuan.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotOne.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotTwo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotThree.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotFour.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotFive.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotSix.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotSeven.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotEight.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotNine.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TravelSanXia.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MaskExtraction.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="StatisticAnalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ProcessRaster.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Triangulation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VectorLayerBufferAnalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ConvexAnalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="RasterNeighborhoodStatistics.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="UserTips.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="VoronoiAnalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="TravelQuYuan.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotOne.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotTwo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotThree.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotFour.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotFive.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotSix.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotSeven.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotEight.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="SpotNine.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="TravelSanXia.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RasterViewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WKTInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="login.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\311GIS.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

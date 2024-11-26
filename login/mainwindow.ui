@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainwindowClass</class>
+ <widget class="QMainWindow" name="mainwindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>798</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mainwindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>902</width>
+         <height>488</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="log">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="time">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Ready</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QMenu" name="file">
+    <property name="title">
+     <string>     文件     </string>
+    </property>
+    <addaction name="openFile"/>
+    <addaction name="saveFile"/>
+    <addaction name="openProjectAct"/>
+    <addaction name="saveProjectAct"/>
+   </widget>
+   <widget class="QMenu" name="windows">
+    <property name="title">
+     <string>     视图     </string>
+    </property>
+    <addaction name="openLayersManageAct"/>
+    <addaction name="openToolBox"/>
+   </widget>
+   <widget class="QMenu" name="analysis">
+    <property name="title">
+     <string>     分析     </string>
+    </property>
+    <widget class="QMenu" name="analysis_2">
+     <property name="title">
+      <string>几何分析</string>
+     </property>
+     <property name="icon">
+      <iconset resource="login.qrc">
+       <normaloff>:/login/res/geometry.png</normaloff>:/login/res/geometry.png</iconset>
+     </property>
+     <addaction name="convexHullAnalysisAct"/>
+     <addaction name="bufferAnalysisAct"/>
+     <addaction name="delaunayAct"/>
+     <addaction name="voronoiAnalysisAct"/>
+    </widget>
+    <addaction name="maskExtrationAct"/>
+    <addaction name="domainAnalysisAct"/>
+    <addaction name="statisticAnalysisAct"/>
+    <addaction name="analysis_2"/>
+    <addaction name="rasterBandAnalysisAct"/>
+   </widget>
+   <widget class="QMenu" name="UserTips">
+    <property name="title">
+     <string>     用户     </string>
+    </property>
+    <widget class="QMenu" name="actionTravel">
+     <property name="title">
+      <string>景点推荐</string>
+     </property>
+     <property name="icon">
+      <iconset resource="login.qrc">
+       <normaloff>:/login/res/travel.png</normaloff>:/login/res/travel.png</iconset>
+     </property>
+     <addaction name="actionQuYuan"/>
+    </widget>
+    <addaction name="actionUserTips"/>
+    <addaction name="actionTravel"/>
+   </widget>
+   <addaction name="file"/>
+   <addaction name="analysis"/>
+   <addaction name="windows"/>
+   <addaction name="UserTips"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openFile"/>
+   <addaction name="saveFile"/>
+   <addaction name="openProjectAct"/>
+   <addaction name="saveProjectAct"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="maskExtrationAct"/>
+   <addaction name="domainAnalysisAct"/>
+   <addaction name="rasterBandAnalysisAct"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="statisticAnalysisAct"/>
+   <addaction name="convexHullAnalysisAct"/>
+   <addaction name="bufferAnalysisAct"/>
+   <addaction name="delaunayAct"/>
+   <addaction name="voronoiAnalysisAct"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="beginEdit"/>
+   <addaction name="moveAct"/>
+   <addaction name="changeColorAct"/>
+   <addaction name="paintModeAct"/>
+   <addaction name="changePenColorAct"/>
+   <addaction name="changeThicknessAct"/>
+   <addaction name="drawPolylineAct"/>
+   <addaction name="drawEllipseAct"/>
+   <addaction name="drawRectangleAct"/>
+   <addaction name="clearLastGraphicAct"/>
+   <addaction name="clearAct"/>
+   <addaction name="endEdit"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="blueModeAct"/>
+   <addaction name="lightModeAct"/>
+   <addaction name="darkModeAct"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="undoAct"/>
+   <addaction name="redoAct"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionUserTips"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="leftDock1">
+   <property name="minimumSize">
+    <size>
+     <width>157</width>
+     <height>279</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>800</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QListView" name="listView">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deleteFile">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="replaceButton">
+       <property name="text">
+        <string>Replace</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="leftDock2">
+   <property name="minimumSize">
+    <size>
+     <width>251</width>
+     <height>300</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>800</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="searchEdit">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="searchButton">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="login.qrc">
+            <normaloff>:/login/res/searchButton.png</normaloff>:/login/res/searchButton.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListView" name="searchedTool">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="toolBox">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="rasterTab">
+        <attribute name="icon">
+         <iconset resource="login.qrc">
+          <normaloff>:/login/res/grid.png</normaloff>:/login/res/grid.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>栅格</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QScrollArea" name="rasterArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_4">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>230</width>
+              <height>200</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <layout class="QGridLayout" name="rasterLayout">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="maskExtrationButton">
+                 <property name="text">
+                  <string>掩膜提取</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/maskExtraction.png</normaloff>:/login/res/maskExtraction.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="domainAnalysisButton">
+                 <property name="text">
+                  <string>邻域统计</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/domainAnalysis.png</normaloff>:/login/res/domainAnalysis.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="rasterBandAnalysisButton">
+                 <property name="text">
+                  <string>栅格波段分析</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/rasterBand.png</normaloff>:/login/res/rasterBand.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="vectorTab">
+        <attribute name="icon">
+         <iconset resource="login.qrc">
+          <normaloff>:/login/res/vector.png</normaloff>:/login/res/vector.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string>矢量</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QScrollArea" name="vectorArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>230</width>
+              <height>200</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <layout class="QGridLayout" name="vectorLayout">
+               <item row="3" column="0">
+                <widget class="QPushButton" name="delaunayButton">
+                 <property name="text">
+                  <string>Delaunay三角网</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/Triangulation.png</normaloff>:/login/res/Triangulation.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="convexHullAnalysisButton">
+                 <property name="text">
+                  <string>凸包分析</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/convexHullAnalysis.png</normaloff>:/login/res/convexHullAnalysis.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="statisticAnalysisButton">
+                 <property name="text">
+                  <string>统计分析</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/statisticAnalysis.png</normaloff>:/login/res/statisticAnalysis.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="bufferAnalysisButton">
+                 <property name="text">
+                  <string>缓冲区分析</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/bufferAnalysis.png</normaloff>:/login/res/bufferAnalysis.png</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QPushButton" name="voronoiAnalysisButton">
+                 <property name="text">
+                  <string>Voronoi图</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="login.qrc">
+                   <normaloff>:/login/res/Voronoi.png</normaloff>:/login/res/Voronoi.png</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="openLayersManageAct">
+   <property name="text">
+    <string>图层管理器</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="convexHullAnalysisAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/convexHullAnalysis.png</normaloff>:/login/res/convexHullAnalysis.png</iconset>
+   </property>
+   <property name="text">
+    <string>凸包分析</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="bufferAnalysisAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/bufferAnalysis.png</normaloff>:/login/res/bufferAnalysis.png</iconset>
+   </property>
+   <property name="text">
+    <string>缓冲区分析</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+  <action name="domainAnalysisAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/domainAnalysis.png</normaloff>:/login/res/domainAnalysis.png</iconset>
+   </property>
+   <property name="text">
+    <string>邻域分析</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="statisticAnalysisAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/statisticAnalysis.png</normaloff>:/login/res/statisticAnalysis.png</iconset>
+   </property>
+   <property name="text">
+    <string>统计分析</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="openFile">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/openFile.png</normaloff>:/login/res/openFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="saveFile">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/saveFile.png</normaloff>:/login/res/saveFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="maskExtrationAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/maskExtraction.png</normaloff>:/login/res/maskExtraction.png</iconset>
+   </property>
+   <property name="text">
+    <string>掩膜提取</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="rasterBandAnalysisAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/rasterBand.png</normaloff>:/login/res/rasterBand.png</iconset>
+   </property>
+   <property name="text">
+    <string>栅格波段分析</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+8</string>
+   </property>
+  </action>
+  <action name="delaunayAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/Triangulation.png</normaloff>:/login/res/Triangulation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delaunay三角网</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+7</string>
+   </property>
+  </action>
+  <action name="actionUserTips">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/UserTips.png</normaloff>:/login/res/UserTips.png</iconset>
+   </property>
+   <property name="text">
+    <string>用户提示</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
+  <action name="openToolBox">
+   <property name="text">
+    <string>工具箱</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
+   </property>
+  </action>
+  <action name="beginEdit">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/beginEdit.png</normaloff>:/login/res/beginEdit.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始编辑</string>
+   </property>
+   <property name="toolTip">
+    <string>开始编辑</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="endEdit">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/endEdit.png</normaloff>:/login/res/endEdit.png</iconset>
+   </property>
+   <property name="text">
+    <string>结束编辑 </string>
+   </property>
+   <property name="toolTip">
+    <string>结束编辑</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="blueModeAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/originalBlueMode.png</normaloff>:/login/res/originalBlueMode.png</iconset>
+   </property>
+   <property name="text">
+    <string>blueMode</string>
+   </property>
+   <property name="toolTip">
+    <string>原生蓝色模式</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="lightModeAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/lightMode.png</normaloff>:/login/res/lightMode.png</iconset>
+   </property>
+   <property name="text">
+    <string>lightModeAct</string>
+   </property>
+   <property name="toolTip">
+    <string>白天模式</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="darkModeAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/darkMode.png</normaloff>:/login/res/darkMode.png</iconset>
+   </property>
+   <property name="text">
+    <string>darkModeAct</string>
+   </property>
+   <property name="toolTip">
+    <string>黑夜模式</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="changeColorAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/changeColor.png</normaloff>:/login/res/changeColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>changeColor</string>
+   </property>
+   <property name="toolTip">
+    <string>修改颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="paintModeAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/drawMode.png</normaloff>:/login/res/drawMode.png</iconset>
+   </property>
+   <property name="text">
+    <string>paintMode</string>
+   </property>
+   <property name="toolTip">
+    <string>绘画模式</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="drawPolylineAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/drawPolyline.png</normaloff>:/login/res/drawPolyline.png</iconset>
+   </property>
+   <property name="text">
+    <string>drawPolyline</string>
+   </property>
+   <property name="toolTip">
+    <string>绘制多线</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="drawEllipseAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/drawEllipse.png</normaloff>:/login/res/drawEllipse.png</iconset>
+   </property>
+   <property name="text">
+    <string>drawEllipse</string>
+   </property>
+   <property name="toolTip">
+    <string>绘制椭圆形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="drawRectangleAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/drawRectangle.png</normaloff>:/login/res/drawRectangle.png</iconset>
+   </property>
+   <property name="text">
+    <string>drawRectangle</string>
+   </property>
+   <property name="toolTip">
+    <string>绘制矩形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="voronoiAnalysisAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/Voronoi.png</normaloff>:/login/res/Voronoi.png</iconset>
+   </property>
+   <property name="text">
+    <string>Voronoi图</string>
+   </property>
+  </action>
+  <action name="moveAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/move.png</normaloff>:/login/res/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move</string>
+   </property>
+   <property name="toolTip">
+    <string>移动模式</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="openProjectAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/openProject.png</normaloff>:/login/res/openProject.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开工程文件</string>
+   </property>
+  </action>
+  <action name="saveProjectAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/saveProject.png</normaloff>:/login/res/saveProject.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存工程文件</string>
+   </property>
+  </action>
+  <action name="clearAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/clear.png</normaloff>:/login/res/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>clear</string>
+   </property>
+   <property name="toolTip">
+    <string>清除图形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="undoAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/undo.png</normaloff>:/login/res/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="redoAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/redo.png</normaloff>:/login/res/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="changePenColorAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/changePenColor.png</normaloff>:/login/res/changePenColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>changePenColor</string>
+   </property>
+   <property name="toolTip">
+    <string>更改画笔颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="changeThicknessAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/changeThickness.png</normaloff>:/login/res/changeThickness.png</iconset>
+   </property>
+   <property name="text">
+    <string>changeThickness</string>
+   </property>
+   <property name="toolTip">
+    <string>更改画笔粗细 </string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="clearLastGraphicAct">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/clearLastGraphic.png</normaloff>:/login/res/clearLastGraphic.png</iconset>
+   </property>
+   <property name="text">
+    <string>clearLastGraphic</string>
+   </property>
+   <property name="toolTip">
+    <string>清除最新绘制图形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionQuYuan">
+   <property name="icon">
+    <iconset resource="login.qrc">
+     <normaloff>:/login/res/travel.png</normaloff>:/login/res/travel.png</iconset>
+   </property>
+   <property name="text">
+    <string>屈原故里</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="login.qrc"/>
+ </resources>
+ <connections/>
+</ui>

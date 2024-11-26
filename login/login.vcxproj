@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BB98B905-DCD8-42CC-BEDB-8858FD3DEB41}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>6.7.2_msvc2019_64</QtInstall>
+    <QtBuildConfig>debug</QtBuildConfig>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>msvc201964</QtInstall>
+    <QtModules>core;gui;widgets;sql</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>D:\gdal\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\gdal\debug\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>$(SolutionDir)gdal\include;$(SolutionDir)CGAL-5.6.1\include;$(SolutionDir)boost_1_85_0;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)gdal\lib;$(SolutionDir)CGAL-5.6.1\auxiliary\gmp\lib;$(SolutionDir)boost_1_85_0\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>gdald.lib;proj_d.lib;sqlite3.lib;openjp2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>gdal.lib;proj.lib;sqlite3.lib;openjp2.lib;ws2_32.lib;libgmp-10.lib;libmpfr-4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ConvexAnalysis.cpp" />
+    <ClCompile Include="GeoJsonInput.cpp" />
+    <ClCompile Include="LayeredCanvas.cpp" />
+    <ClCompile Include="MainWindow.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).moc</QtMocFileName>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <QtMocFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).moc</QtMocFileName>
+    </ClCompile>
+    <ClCompile Include="MaskExtraction.cpp" />
+    <ClCompile Include="RasterBandAnalysis.cpp" />
+    <ClCompile Include="RasterNeighborhoodStatistics.cpp" />
+    <ClCompile Include="SpotEight.cpp" />
+    <ClCompile Include="SpotFive.cpp" />
+    <ClCompile Include="SpotFour.cpp" />
+    <ClCompile Include="SpotNine.cpp" />
+    <ClCompile Include="SpotOne.cpp" />
+    <ClCompile Include="SpotSeven.cpp" />
+    <ClCompile Include="SpotSix.cpp" />
+    <ClCompile Include="SpotThree.cpp" />
+    <ClCompile Include="SpotTwo.cpp" />
+    <ClCompile Include="StatisticAnalysis.cpp" />
+    <ClCompile Include="TravelQuYuan.cpp" />
+    <ClCompile Include="TravelSanXia.cpp" />
+    <ClCompile Include="Triangulation.cpp" />
+    <ClCompile Include="UserTips.cpp" />
+    <ClCompile Include="VectorLayerRenderer.cpp" />
+    <ClCompile Include="VectorLayerBufferAnalysis.cpp" />
+    <ClCompile Include="VoronoiAnalysis.cpp" />
+    <ClCompile Include="WKTInput.cpp" />
+    <QtRcc Include="login.qrc" />
+    <QtUic Include="ConvexAnalysis.ui" />
+    <QtUic Include="login.ui" />
+    <QtMoc Include="Login.h" />
+    <ClCompile Include="Login.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="mainwindow.ui" />
+    <QtUic Include="MaskExtraction.ui" />
+    <QtUic Include="ProcessRaster.ui" />
+    <QtUic Include="RasterNeighborhoodStatistics.ui" />
+    <QtUic Include="SpotEight.ui" />
+    <QtUic Include="SpotFive.ui" />
+    <QtUic Include="SpotFour.ui" />
+    <QtUic Include="SpotNine.ui" />
+    <QtUic Include="SpotOne.ui" />
+    <QtUic Include="SpotSeven.ui" />
+    <QtUic Include="SpotSix.ui" />
+    <QtUic Include="SpotThree.ui" />
+    <QtUic Include="SpotTwo.ui" />
+    <QtUic Include="StatisticAnalysis.ui" />
+    <QtUic Include="TravelQuYuan.ui" />
+    <QtUic Include="TravelSanXia.ui" />
+    <QtUic Include="Triangulation.ui" />
+    <QtUic Include="UserTips.ui" />
+    <QtUic Include="VectorLayerBufferAnalysis.ui" />
+    <QtUic Include="VoronoiAnalysis.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MainWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="VectorLayerRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="VoronoiAnalysis.h" />
+    <QtMoc Include="UserTips.h" />
+    <QtMoc Include="RasterNeighborhoodStatistics.h" />
+    <QtMoc Include="VectorLayerBufferAnalysis.h" />
+    <QtMoc Include="Triangulation.h" />
+    <QtMoc Include="RasterBandAnalysis.h" />
+    <QtMoc Include="StatisticAnalysis.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="TravelQuYuan.h" />
+    <QtMoc Include="SpotOne.h" />
+    <QtMoc Include="SpotTwo.h" />
+    <QtMoc Include="SpotThree.h" />
+    <QtMoc Include="SpotFour.h" />
+    <QtMoc Include="SpotFive.h" />
+    <QtMoc Include="SpotSix.h" />
+    <QtMoc Include="SpotSeven.h" />
+    <QtMoc Include="SpotEight.h" />
+    <QtMoc Include="SpotNine.h" />
+    <ClInclude Include="resource1.h" />
+    <QtMoc Include="TravelSanXia.h" />
+    <ClInclude Include="WKTInput.h" />
+    <QtMoc Include="GeoJsonInput.h" />
+    <QtMoc Include="ConvexAnalysis.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="RasterViewer.h" />
+    <QtMoc Include="LayeredCanvas.h" />
+    <QtMoc Include="MaskExtraction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="login.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\311GIS.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
